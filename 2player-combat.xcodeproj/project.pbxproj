@@ -12,6 +12,11 @@
 		D35C426F1C8B6E8900B945AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35C426D1C8B6E8900B945AA /* Main.storyboard */; };
 		D35C42711C8B6E8900B945AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35C42701C8B6E8900B945AA /* Assets.xcassets */; };
 		D35C42741C8B6E8900B945AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35C42721C8B6E8900B945AA /* LaunchScreen.storyboard */; };
+		D35C42831C8B82DB00B945AA /* audio in Resources */ = {isa = PBXBuildFile; fileRef = D35C42821C8B82DB00B945AA /* audio */; };
+		D35C42851C8B832300B945AA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C42841C8B832300B945AA /* Game.swift */; };
+		D3B261F71C8B9900005DCD9C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B261F61C8B9900005DCD9C /* Character.swift */; };
+		D3B261F91C8B998F005DCD9C /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B261F81C8B998F005DCD9C /* Hero.swift */; };
+		D3B261FB1C8B99A3005DCD9C /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B261FA1C8B99A3005DCD9C /* Enemy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		D35C42701C8B6E8900B945AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D35C42731C8B6E8900B945AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D35C42751C8B6E8900B945AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35C42821C8B82DB00B945AA /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
+		D35C42841C8B832300B945AA /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		D3B261F61C8B9900005DCD9C /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		D3B261F81C8B998F005DCD9C /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		D3B261FA1C8B99A3005DCD9C /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +64,17 @@
 		D35C42681C8B6E8900B945AA /* 2player-combat */ = {
 			isa = PBXGroup;
 			children = (
+				D35C42821C8B82DB00B945AA /* audio */,
 				D35C42691C8B6E8900B945AA /* AppDelegate.swift */,
 				D35C426B1C8B6E8900B945AA /* ViewController.swift */,
 				D35C426D1C8B6E8900B945AA /* Main.storyboard */,
 				D35C42701C8B6E8900B945AA /* Assets.xcassets */,
 				D35C42721C8B6E8900B945AA /* LaunchScreen.storyboard */,
 				D35C42751C8B6E8900B945AA /* Info.plist */,
+				D35C42841C8B832300B945AA /* Game.swift */,
+				D3B261F61C8B9900005DCD9C /* Character.swift */,
+				D3B261F81C8B998F005DCD9C /* Hero.swift */,
+				D3B261FA1C8B99A3005DCD9C /* Enemy.swift */,
 			);
 			path = "2player-combat";
 			sourceTree = "<group>";
@@ -125,6 +140,7 @@
 				D35C42741C8B6E8900B945AA /* LaunchScreen.storyboard in Resources */,
 				D35C42711C8B6E8900B945AA /* Assets.xcassets in Resources */,
 				D35C426F1C8B6E8900B945AA /* Main.storyboard in Resources */,
+				D35C42831C8B82DB00B945AA /* audio in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B261F91C8B998F005DCD9C /* Hero.swift in Sources */,
 				D35C426C1C8B6E8900B945AA /* ViewController.swift in Sources */,
+				D3B261FB1C8B99A3005DCD9C /* Enemy.swift in Sources */,
+				D35C42851C8B832300B945AA /* Game.swift in Sources */,
 				D35C426A1C8B6E8900B945AA /* AppDelegate.swift in Sources */,
+				D3B261F71C8B9900005DCD9C /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +304,7 @@
 				D35C427A1C8B6E8900B945AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
