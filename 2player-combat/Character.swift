@@ -13,6 +13,7 @@ class Character{
     private var _hp: Int = 100
     private var _attackPwr: Int = 100
     
+    
     var hp: Int{
         get{
             return _hp
@@ -40,7 +41,7 @@ class Character{
         self._attackPwr = attackPwr
     }
     
-    func attack(attackPwr:Int) -> Bool{
+    func isAttackedBy(attackPwr:Int) -> Bool{
         self._hp -= attackPwr
         
         return true

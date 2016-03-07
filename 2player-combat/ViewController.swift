@@ -19,11 +19,19 @@ class ViewController: UIViewController {
     var player1Sprite = ""
     var player2Sprite = ""
     
+    var player1: Character!
+    var player2: Character!
+    
     @IBOutlet weak var character1: UIImageView!
     @IBOutlet weak var character2: UIImageView!
     
     @IBOutlet weak var chooseHeroBtn: UIButton!
     @IBOutlet weak var chooseEnemyBtn: UIButton!
+    
+    @IBOutlet weak var player1AttackBtn: UIButton!
+    @IBOutlet weak var player2AttackBtn: UIButton!
+    @IBOutlet weak var restartBtn: UIButton!
+    
 
     @IBOutlet weak var mainLbl: UILabel!
     
@@ -40,14 +48,14 @@ class ViewController: UIViewController {
         if player1Selecting == true{
             player1Sprite = "player-1"
             
-            var player1 = Hero()
+            player1 = Hero()
             
             player2Screen()
             
         }else if player2Selecting == true{
             player2Sprite = "player-2"
             
-            var player2 = Hero()
+            player2 = Hero()
             
             //start game after player 2
             startGame(player1Sprite, player2Character: player2Sprite)
@@ -63,12 +71,12 @@ class ViewController: UIViewController {
             
             player2Screen()
             
-            var player1 = Enemy()
+            player1 = Enemy()
         
         }else if player2Selecting == true{
             player2Sprite = "enemy-2"
             
-            var player2 = Enemy()
+            player2 = Enemy()
             
             //start game after player 2
             startGame(player1Sprite, player2Character: player2Sprite)
@@ -76,6 +84,17 @@ class ViewController: UIViewController {
     }
     
     func player1Screen(){
+        
+        player1Selecting = true
+        player2Selecting = false
+        
+        character1.hidden = false
+        character2.hidden = false
+        
+        chooseEnemyBtn.hidden = false
+        chooseHeroBtn.hidden = false
+        
+        mainLbl.text = "Player 1 choose character."
         
         character1.image = UIImage(named: "player-1")
         character2.image = UIImage(named: "enemy-1")
@@ -95,11 +114,14 @@ class ViewController: UIViewController {
     
     func startGame(player1Character: String, player2Character: String){
         
-        //should initialize objects of 'characters' here instead of sprites, HP, attack etc..
         
         character1.image = UIImage(named: player1Character)
         character2.image = UIImage(named: player2Character)
         
+        player1AttackBtn.hidden = false
+        player2AttackBtn.hidden = false
+        
+
         chooseHeroBtn.hidden = true
         chooseEnemyBtn.hidden = true
         
@@ -109,6 +131,60 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func player1AttackPressed(sender: AnyObject) {
+        
+        
+        player2.isAttackedBy(player1.attackPwr)
+        mainLbl.text = "Player 1 Attacked! \(player2.hp) HP"
+        
+        if !player2.isAlive{
+            mainLbl.text = "Player 2 Dead!"
+            character2.hidden = true
+            player2AttackBtn.hidden = true
+            
+            restartBtn.hidden = false
+        }
+        
+        
+    }
+    
+    @IBAction func player2AttackPressed(sender: AnyObject) {
+       
+        
+        player1.isAttackedBy(player2.attackPwr)
+        mainLbl.text = "Player 2 Attacked! \(player1.hp) HP"
+        
+        if !player1.isAlive{
+            mainLbl.text = "Player 1 Dead!"
+            character1.hidden = true
+            player1AttackBtn.hidden = true
+            
+            restartBtn.hidden = false
+        }
+        
+    }
+    
+   
+    @IBAction func restartPressed(sender: AnyObject) {
+        resetGameBoard()
+        
+    }
+    
+    
+    func resetGameBoard(){
+        
+        character1.hidden = true
+        character2.hidden = true
+        player1AttackBtn.hidden = true
+        player2AttackBtn.hidden = true
+        
+        
+        
+        restartBtn.hidden = true
+        
+        
+        player1Screen()
+    }
 
     
     

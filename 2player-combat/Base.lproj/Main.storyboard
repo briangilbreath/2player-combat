@@ -40,6 +40,16 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Vp2-kJ-ueD"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Choose Character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCj-F8-iiq" userLabel="mainLbl">
+                                <rect key="frame" x="89" y="538" width="423" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="TKs-ef-rhn"/>
+                                    <constraint firstAttribute="width" constant="423" id="dyv-6X-4NJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="player-1" translatesAutoresizingMaskIntoConstraints="NO" id="t8a-IE-b0o" userLabel="character 1">
                                 <rect key="frame" x="33" y="261" width="223" height="237"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
@@ -96,6 +106,50 @@
                                     <action selector="chooseHeroClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5iL-2o-It9"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtV-uE-baa">
+                                <rect key="frame" x="52" y="209" width="185" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="TXO-Mj-DGN"/>
+                                    <constraint firstAttribute="width" constant="185" id="hQP-Mg-jr8"/>
+                                    <constraint firstAttribute="width" constant="216" id="p4b-R2-wDi"/>
+                                    <constraint firstAttribute="height" constant="72" id="zFN-hq-w4g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="18"/>
+                                <state key="normal" title="Attack!" backgroundImage="player1attackbtn">
+                                    <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="p4b-R2-wDi"/>
+                                        <exclude reference="zFN-hq-w4g"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="player1AttackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hLu-h9-H39"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgI-TU-kbq">
+                                <rect key="frame" x="364" y="209" width="185" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="0Zb-jV-flE"/>
+                                    <constraint firstAttribute="width" constant="185" id="DBy-3h-Fdl"/>
+                                    <constraint firstAttribute="height" constant="72" id="fwZ-Di-TZK"/>
+                                    <constraint firstAttribute="height" constant="61" id="nRs-Sw-aDc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="18"/>
+                                <state key="normal" title="Attack!" backgroundImage="player2attackbtn">
+                                    <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0Zb-jV-flE"/>
+                                        <exclude reference="fwZ-Di-TZK"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="player2AttackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xLb-pJ-Cah"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNi-n4-AjW">
                                 <rect key="frame" x="364" y="416" width="185" height="61"/>
                                 <constraints>
@@ -118,24 +172,41 @@
                                     <action selector="chooseEnemyClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Wl-Ck-PLq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Choose Character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCj-F8-iiq" userLabel="mainLbl">
-                                <rect key="frame" x="89" y="538" width="423" height="21"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFo-ds-kGg">
+                                <rect key="frame" x="208" y="209" width="185" height="61"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="TKs-ef-rhn"/>
-                                    <constraint firstAttribute="width" constant="423" id="dyv-6X-4NJ"/>
+                                    <constraint firstAttribute="width" constant="185" id="24c-ZW-SMx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="2xk-dp-jRQ"/>
+                                    <constraint firstAttribute="width" constant="216" id="3xH-35-0Mb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="NDN-K9-xvG"/>
+                                    <constraint firstAttribute="height" constant="61" id="bzr-nM-pnd"/>
+                                    <constraint firstAttribute="height" constant="72" id="dal-GP-ndv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="18"/>
+                                <state key="normal" title="Play Again" backgroundImage="player1attackbtn">
+                                    <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3xH-35-0Mb"/>
+                                        <exclude reference="dal-GP-ndv"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="restartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="drQ-da-cm5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qtV-uE-baa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="52" id="2gc-UV-CDv"/>
                             <constraint firstItem="L83-1p-BMQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="68" id="3CI-N3-8H6"/>
                             <constraint firstItem="Pl6-zo-1HK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="4To-i5-ngd"/>
+                            <constraint firstItem="GFo-ds-kGg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="208" id="5LY-Zd-kcP"/>
                             <constraint firstAttribute="trailing" secondItem="xER-et-gUS" secondAttribute="trailing" id="85d-1h-bHe"/>
                             <constraint firstItem="VNi-n4-AjW" firstAttribute="centerX" secondItem="Orn-SI-aBX" secondAttribute="centerX" id="85y-5d-1gh"/>
                             <constraint firstItem="ja6-Bc-Ti5" firstAttribute="top" secondItem="VNi-n4-AjW" secondAttribute="bottom" constant="21" id="8Qe-bH-qnt"/>
+                            <constraint firstAttribute="trailing" secondItem="GFo-ds-kGg" secondAttribute="trailing" constant="207" id="9Ip-1S-re6"/>
                             <constraint firstAttribute="trailing" secondItem="ja6-Bc-Ti5" secondAttribute="trailing" id="Cco-Gz-5ze"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ja6-Bc-Ti5" secondAttribute="bottom" id="DXf-Pv-amn"/>
                             <constraint firstItem="ja6-Bc-Ti5" firstAttribute="top" secondItem="VNi-n4-AjW" secondAttribute="bottom" constant="21" id="Doh-pK-Wai"/>
@@ -150,7 +221,10 @@
                             <constraint firstItem="YCj-F8-iiq" firstAttribute="centerX" secondItem="L83-1p-BMQ" secondAttribute="centerX" id="VaK-ns-lp3"/>
                             <constraint firstItem="ja6-Bc-Ti5" firstAttribute="top" secondItem="Orn-SI-aBX" secondAttribute="bottom" id="Wrr-Iy-wUf"/>
                             <constraint firstItem="ja6-Bc-Ti5" firstAttribute="top" secondItem="Pl6-zo-1HK" secondAttribute="bottom" constant="21" id="ci1-Wf-umj"/>
+                            <constraint firstAttribute="trailing" secondItem="BgI-TU-kbq" secondAttribute="trailing" constant="51" id="f6A-0K-uRU"/>
+                            <constraint firstItem="GFo-ds-kGg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="189" id="fGx-gA-ApR"/>
                             <constraint firstItem="YCj-F8-iiq" firstAttribute="centerY" secondItem="L83-1p-BMQ" secondAttribute="centerY" id="fcM-Ey-ATl"/>
+                            <constraint firstItem="VNi-n4-AjW" firstAttribute="top" secondItem="BgI-TU-kbq" secondAttribute="bottom" constant="146" id="j3P-FE-dtt"/>
                             <constraint firstItem="xER-et-gUS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lja-D2-ecJ"/>
                             <constraint firstItem="Pl6-zo-1HK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="moJ-iL-VlF"/>
                             <constraint firstItem="Pl6-zo-1HK" firstAttribute="centerX" secondItem="t8a-IE-b0o" secondAttribute="centerX" id="ms0-Vh-jgv"/>
@@ -159,6 +233,7 @@
                             <constraint firstItem="xER-et-gUS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pPu-xR-gDM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L83-1p-BMQ" secondAttribute="bottom" constant="16" id="saG-bV-jFt"/>
                             <constraint firstAttribute="trailing" secondItem="Orn-SI-aBX" secondAttribute="trailing" constant="32" id="tQg-bO-azG"/>
+                            <constraint firstItem="Pl6-zo-1HK" firstAttribute="top" secondItem="qtV-uE-baa" secondAttribute="bottom" constant="146" id="tRo-Sn-hN6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xER-et-gUS" secondAttribute="bottom" id="urc-0I-fYq"/>
                         </constraints>
                         <variation key="default">
@@ -181,6 +256,9 @@
                         <outlet property="chooseEnemyBtn" destination="VNi-n4-AjW" id="zp8-ae-Gel"/>
                         <outlet property="chooseHeroBtn" destination="Pl6-zo-1HK" id="u86-lt-v7C"/>
                         <outlet property="mainLbl" destination="YCj-F8-iiq" id="xTH-EI-xJl"/>
+                        <outlet property="player1AttackBtn" destination="qtV-uE-baa" id="qTp-eT-fHL"/>
+                        <outlet property="player2AttackBtn" destination="BgI-TU-kbq" id="Cn8-H5-rTy"/>
+                        <outlet property="restartBtn" destination="GFo-ds-kGg" id="kiL-sC-C9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -194,6 +272,7 @@
         <image name="player-1" width="406" height="441"/>
         <image name="player-2" width="406" height="441"/>
         <image name="player1attackbtn" width="212" height="78"/>
+        <image name="player2attackbtn" width="212" height="78"/>
         <image name="text-holder" width="696" height="106"/>
     </resources>
 </document>
