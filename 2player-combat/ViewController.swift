@@ -99,6 +99,8 @@ class ViewController: UIViewController {
         character1.image = UIImage(named: "player-1")
         character2.image = UIImage(named: "enemy-1")
         
+        game.playMainMusic()
+        
     }
     
     func player2Screen(){
@@ -125,7 +127,7 @@ class ViewController: UIViewController {
         chooseHeroBtn.hidden = true
         chooseEnemyBtn.hidden = true
         
-        //maybe change music?
+        game.playBattleMusic()
         
         mainLbl.text = "FIGHT!"
     }
@@ -138,11 +140,18 @@ class ViewController: UIViewController {
         mainLbl.text = "Player 1 Attacked! \(player2.hp) HP"
         
         if !player2.isAlive{
-            mainLbl.text = "Player 2 Dead!"
-            character2.hidden = true
-            player2AttackBtn.hidden = true
             
+            //if player2 is defeated
+
+            mainLbl.text = "Player 2 Dead - Player 1 Wins!"
+            character2.hidden = true
+            player1AttackBtn.hidden = true
+            player2AttackBtn.hidden = true
             restartBtn.hidden = false
+            
+            player2.isKilled()
+        
+            game.playVictoryMusic()
         }
         
         
@@ -155,11 +164,19 @@ class ViewController: UIViewController {
         mainLbl.text = "Player 2 Attacked! \(player1.hp) HP"
         
         if !player1.isAlive{
-            mainLbl.text = "Player 1 Dead!"
+            
+            //if player1 is defeated
+            
+            mainLbl.text = "Player 1 Dead - Player 2 Wins"
             character1.hidden = true
             player1AttackBtn.hidden = true
+            player2AttackBtn.hidden = true
             
             restartBtn.hidden = false
+            
+            player1.isKilled()
+            
+            game.playVictoryMusic()
         }
         
     }
@@ -167,7 +184,6 @@ class ViewController: UIViewController {
    
     @IBAction func restartPressed(sender: AnyObject) {
         resetGameBoard()
-        
     }
     
     
@@ -178,11 +194,9 @@ class ViewController: UIViewController {
         player1AttackBtn.hidden = true
         player2AttackBtn.hidden = true
         
-        
-        
         restartBtn.hidden = true
         
-        
+        //go back to starting screen
         player1Screen()
     }
 

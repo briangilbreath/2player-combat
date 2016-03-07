@@ -235,12 +235,15 @@
                             <constraint firstAttribute="trailing" secondItem="Orn-SI-aBX" secondAttribute="trailing" constant="32" id="tQg-bO-azG"/>
                             <constraint firstItem="Pl6-zo-1HK" firstAttribute="top" secondItem="qtV-uE-baa" secondAttribute="bottom" constant="146" id="tRo-Sn-hN6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xER-et-gUS" secondAttribute="bottom" id="urc-0I-fYq"/>
+                            <constraint firstItem="GFo-ds-kGg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zS8-6u-PBL"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="I0j-i9-1su"/>
                                 <exclude reference="Tii-6Z-A28"/>
                                 <exclude reference="V8v-ZI-DB8"/>
+                                <exclude reference="5LY-Zd-kcP"/>
+                                <exclude reference="9Ip-1S-re6"/>
                                 <exclude reference="4To-i5-ngd"/>
                                 <exclude reference="moJ-iL-VlF"/>
                                 <exclude reference="Doh-pK-Wai"/>

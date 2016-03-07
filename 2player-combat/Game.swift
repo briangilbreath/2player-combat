@@ -7,43 +7,40 @@
 //
 
 import Foundation
-import AVFoundation
+
 
 class Game{
     
-    var soundFile: AVAudioPlayer!
+    var mainMusic: Sound?
     
     init(){
         
-        self.setupSound()
+        self.playMainMusic()
         
     }
     
     
-    private func setupSound(){
+    func playMainMusic(){
         
-        self.sound("main-theme", action: "play")
+        mainMusic = Sound(fileName:"main-theme")
+        mainMusic?.play()
 
     }
     
-    
-    private func sound(fileName: String, action: String){
-        let soundPath = NSBundle.mainBundle().pathForResource(fileName, ofType: "mp3", inDirectory: "audio")
-        let soundUrl = NSURL(fileURLWithPath: soundPath!)
+    func playBattleMusic(){
         
-        do {
-            //play music from start
-            try soundFile = AVAudioPlayer(contentsOfURL: soundUrl)
-            
-            if action == "play"{
-                 soundFile.play()
-            }else if action == "prepare"{
-                soundFile.prepareToPlay()
-            }
-           
-        } catch let err as NSError{
-            print(err.debugDescription)
-        }
+        mainMusic = Sound(fileName:"battle-theme")
+        mainMusic?.play()
+        
     }
+    
+    func playVictoryMusic(){
+        
+        mainMusic = Sound(fileName:"victory-theme")
+        mainMusic?.play()
+        
+    }
+    
+
     
 }

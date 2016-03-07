@@ -47,6 +47,10 @@ class Character{
         return true
     }
     
+    func isKilled(){
+     
+    }
+    
     
     
 }

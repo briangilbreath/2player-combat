@@ -17,6 +17,7 @@
 		D3B261F71C8B9900005DCD9C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B261F61C8B9900005DCD9C /* Character.swift */; };
 		D3B261F91C8B998F005DCD9C /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B261F81C8B998F005DCD9C /* Hero.swift */; };
 		D3B261FB1C8B99A3005DCD9C /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B261FA1C8B99A3005DCD9C /* Enemy.swift */; };
+		D3B261FF1C8D2C8D005DCD9C /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B261FE1C8D2C8D005DCD9C /* Sound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D3B261F61C8B9900005DCD9C /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		D3B261F81C8B998F005DCD9C /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		D3B261FA1C8B99A3005DCD9C /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		D3B261FE1C8D2C8D005DCD9C /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				D3B261F61C8B9900005DCD9C /* Character.swift */,
 				D3B261F81C8B998F005DCD9C /* Hero.swift */,
 				D3B261FA1C8B99A3005DCD9C /* Enemy.swift */,
+				D3B261FE1C8D2C8D005DCD9C /* Sound.swift */,
 			);
 			path = "2player-combat";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B261FF1C8D2C8D005DCD9C /* Sound.swift in Sources */,
 				D3B261F91C8B998F005DCD9C /* Hero.swift in Sources */,
 				D35C426C1C8B6E8900B945AA /* ViewController.swift in Sources */,
 				D3B261FB1C8B99A3005DCD9C /* Enemy.swift in Sources */,
